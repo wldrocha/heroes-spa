@@ -5,9 +5,9 @@ import { getHeroById } from '../helpers'
 export const HeroePage = () => {
   const { id } = useParams()
 
-  const hero = getHeroById(id)
+  const hero = useMemo(() => getHeroById(id), [id])
 
-  if(!hero) return <Navigate to="/marvel"/>
+  if (!hero) return <Navigate to='/marvel' />
 
   return (
     <>
