@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 const CharactersByHero = ({ alterEgo, characters }) => {
   if (alterEgo !== characters) {
-    return <p>alter {characters}</p>
+    return <p>{characters}</p>
   }
 }
 
